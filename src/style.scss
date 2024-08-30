@@ -1,0 +1,18 @@
+@import 'node_modules/normalize-scss/sass/normalize';
+
+@include normalize();
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+
+  padding-inline: 20px;
+  margin: 0 auto;
+
+  display: flex;
+}
+
+#app {
+  width: 100dvw;
+  height: 100dvh;
+}
