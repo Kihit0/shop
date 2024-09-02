@@ -53,7 +53,12 @@ const Footer = () => {
             })}
           </div>
         </div>
-        <div {...{ className: styles.footer__copyright }}>copy</div>
+        <div {...{ className: styles.footer__copyright }}>
+          <p {...{ className: styles.footer__copyright_text }}>Copyright © 2023 Moon</p>
+          <p {...{ className: styles.footer__copyright_text }}>All Rights Reserved</p>
+          <a {...{ className: styles.footer__copyright_link, href: '#' }}>Terms and Conditions</a>
+          <a {...{ className: styles.footer__copyright_link, href: '#' }}>Privacy Policy</a>
+        </div>
       </div>
     </footer>
   );

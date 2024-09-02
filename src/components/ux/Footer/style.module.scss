@@ -88,10 +88,31 @@
   }
 
   &__copyright {
-    padding: 32px 80px;
+    padding-block: 16px;
 
     display: flex;
     align-items: center;
     justify-content: center;
+
+    &_text,
+    &_link {
+      padding-inline: 8px;
+
+      font-size: 16px;
+      border-right: 1px solid var(--color-french-gray);
+    }
+
+    &_text {
+      color: var(--color-spun-pearl);
+    }
+
+    &_link {
+      color: var(--color-jumbo);
+      text-decoration: underline;
+
+      &:last-child {
+        border-right: none;
+      }
+    }
   }
 }
