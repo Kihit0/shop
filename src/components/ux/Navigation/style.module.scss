@@ -1,0 +1,43 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+
+  &__burger {
+    display: none;
+  }
+
+  &__links,
+  &__icons {
+    display: flex;
+
+    list-style: none;
+  }
+
+  &__link {
+    margin-right: 60px;
+
+    transition: color 0.2s ease-in;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      color: var(--color-antique-brass);
+    }
+
+    &-active {
+      color: var(--color-antique-brass);
+    }
+  }
+
+  &__icon {
+    margin-right: 24px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

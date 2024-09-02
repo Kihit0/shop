@@ -1,6 +1,15 @@
+@use './assets/scss/fonts';
+
+@import './assets/scss/variables';
 @import 'node_modules/normalize-scss/sass/normalize';
 
 @include normalize();
+
+html {
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  color: var(--color-tune);
+}
 
 .container {
   width: 100%;
@@ -15,4 +24,9 @@
 #app {
   width: 100dvw;
   height: 100dvh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }

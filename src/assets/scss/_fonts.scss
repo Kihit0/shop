@@ -1,0 +1,33 @@
+$urlFonts: './assets/fonts';
+$Inter: 'Inter';
+$Garamond: 'Garamond';
+$formatTtf: 'ttf';
+
+$fonts: (
+  $Inter: (
+    400: '#{$urlFonts}/Inter-Regular.ttf',
+    500: '#{$urlFonts}/Inter-Medium.ttf',
+    600: '#{$urlFonts}/Inter-SemiBold.ttf',
+  ),
+  $Garamond: (
+    400: '#{$urlFonts}/Garamond-Regular.ttf',
+    500: '#{$urlFonts}/Garamond-Medium.ttf',
+    600: '#{$urlFonts}/Garamond-SemiBold.ttf',
+    700: '#{$urlFonts}/Garamond-Bold.ttf',
+  ),
+);
+
+@mixin font-face($font-name, $weight, $file-path) {
+  @font-face {
+    font-family: #{$font-name};
+    font-weight: $weight;
+    font-style: normal;
+    src: url(#{$file-path}) format('truetype');
+  }
+}
+
+@each $font-name, $variants in $fonts {
+  @each $weight, $file-path in $variants {
+    @include font-face($font-name, $weight, $file-path);
+  }
+}
