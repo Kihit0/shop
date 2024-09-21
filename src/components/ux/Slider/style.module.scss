@@ -1,0 +1,16 @@
+.slider {
+  padding-top: 80px;
+  height: 640px;
+  width: 100%;
+
+  overflow: hidden;
+
+  &__wrapper {
+    position: relative;
+    height: inherit;
+  }
+
+  &__content {
+    height: inherit;
+  }
+}

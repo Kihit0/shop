@@ -25,6 +25,15 @@
     padding: 16px 18px;
   }
 
+  &__header {
+    color: #826f66;
+    background-color: #fff;
+    border-color: #fff;
+
+    width: 220px;
+    padding-block: 10px;
+  }
+
   &:hover {
     opacity: 0.9;
   }
