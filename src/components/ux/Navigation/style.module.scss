@@ -1,11 +1,33 @@
 .navigation {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   width: 100%;
 
   &__burger {
     display: none;
+
+    @media screen and (max-width: 768px) {
+      display: block;
+    }
+
+    &_close {
+      position: absolute;
+      z-index: 1000;
+    }
+  }
+
+  &__logo {
+    @media screen and (max-width: 768px) {
+      width: 100%;
+
+      & > a {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+      }
+    }
   }
 
   &__links,
@@ -13,6 +35,32 @@
     display: flex;
 
     list-style: none;
+  }
+
+  &__links {
+    @media screen and (max-width: 768px) {
+      display: none;
+
+      &-burger {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        position: absolute;
+        z-index: 100;
+        inset: 0;
+
+        margin: 0;
+        padding: 60px 0 0;
+        background-color: #fff;
+      }
+    }
+  }
+
+  &__icons {
+    @media screen and (max-width: 768px) {
+      padding-left: 0;
+    }
   }
 
   &__link {
@@ -31,10 +79,67 @@
     &-active {
       color: var(--color-antique-brass);
     }
+
+    @media screen and (max-width: 768px) {
+      margin-right: 0;
+
+      width: 100%;
+      text-align: center;
+
+      & > a {
+        display: inline-block;
+        padding-block: 20px;
+        width: 100%;
+      }
+    }
+  }
+
+  &__close {
+    display: none;
+    position: relative;
+
+    cursor: pointer;
+
+    &-active {
+      display: block;
+      position: absolute;
+      z-index: 101;
+
+      top: 20px;
+      right: 30px;
+    }
+
+    &_line {
+      display: block;
+
+      position: absolute;
+      top: 0;
+
+      width: 2px;
+      height: 18px;
+
+      background-color: #000;
+
+      border-radius: 1px;
+
+      rotate: 45deg;
+
+      &:last-child {
+        rotate: -45deg;
+      }
+    }
   }
 
   &__icon {
     margin-right: 24px;
+
+    @media screen and (max-width: 768px) {
+      &:not(:last-child) {
+        display: none;
+
+        margin-right: 0;
+      }
+    }
 
     &:last-child {
       margin-right: 0;
