@@ -6,14 +6,12 @@ const cx = classNames.bind(styles);
 
 const Header = () => {
   return (
-    <header {...{ className: cx(styles.header, 'container') }}>
+    <header {...{ className: styles.header }}>
       <div {...{ className: styles.header__wrapper }}>
         <div {...{ className: styles.header__navigation }}>
-          <Navigation />
-        </div>
-        <div {...{ className: styles.header__slider }}>
-          <div {...{ className: styles.header__content }}></div>
-          <div></div>
+          <div {...{ className: cx('container') }}>
+            <Navigation />
+          </div>
         </div>
       </div>
     </header>
