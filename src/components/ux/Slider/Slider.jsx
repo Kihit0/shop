@@ -23,9 +23,7 @@ const Slider = (props) => {
               },
               speed: 500,
               effect: 'fade',
-              style: {
-                height: 'inherit',
-              },
+              className: styles.slider__swiper,
             }}
           >
             {sliderItems.map((item, idx) => {

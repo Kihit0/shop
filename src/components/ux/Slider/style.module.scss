@@ -3,14 +3,28 @@
   height: 640px;
   width: 100%;
 
-  overflow: hidden;
+  @media screen and (max-width: 768px) {
+    height: auto;
+  }
 
   &__wrapper {
     position: relative;
     height: inherit;
+
+    @media screen and (max-width: 768px) {
+      position: static;
+    }
   }
 
   &__content {
     height: inherit;
+  }
+
+  &__swiper {
+    height: inherit;
+
+    @media screen and (max-width: 768px) {
+      height: 420px;
+    }
   }
 }
