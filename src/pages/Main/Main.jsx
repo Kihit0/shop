@@ -3,30 +3,19 @@ import Slider from '../../components/ux/Slider/Slider';
 import Logo from '../../components/ux/Logo/Logo';
 import { Link } from 'react-router-dom';
 import classNames from 'classnames/bind';
+import CardList from '../../components/ux/CardList/CardList';
+import { slider } from '../../mock/slider';
+import { cardItemsBestSellers, cardItemsMinimal, cardItemV2Discount } from '../../mock/card';
+import Card from '../../components/ux/Card/Card';
 
 const cx = classNames.bind(styles);
-
-const sliderImg = [
-  {
-    image: 'src/assets/images/header-slider.jpg',
-  },
-  {
-    image: 'src/assets/images/header-slider1.jpg',
-  },
-  {
-    image: 'src/assets/images/header-slider2.jpg',
-  },
-  {
-    image: 'src/assets/images/header-slider3.jpg',
-  },
-];
 
 const Main = () => {
   return (
     <div {...{ className: styles.main }}>
       <div {...{ className: styles.main__wrapper }}>
         <div {...{ className: styles.slider }}>
-          <Slider {...{ sliderItems: sliderImg }}>
+          <Slider {...{ sliderItems: slider }}>
             <div {...{ className: styles.slider__message }}>
               <div {...{ className: cx(styles.slider__message_wrapper, 'container') }}>
                 <div {...{ className: styles.slider__message_content }}>
@@ -46,7 +35,20 @@ const Main = () => {
           </Slider>
         </div>
         <div {...{ className: cx(styles.main__content, 'container') }}>
-          <div>content</div>
+          <div {...{ className: cx('pb-80') }}>
+            <CardList
+              {...{
+                data: cardItemsMinimal,
+                v: 'minimal',
+              }}
+            />
+          </div>
+          <div {...{ className: cx('pb-80') }}>
+            <Card {...{ cardData: cardItemV2Discount }} />
+          </div>
+          <div {...{ className: cx('pb-80') }}>
+            <CardList {...{ data: cardItemsBestSellers, title: 'Best sellers', v: 'v1' }} />
+          </div>
         </div>
       </div>
     </div>

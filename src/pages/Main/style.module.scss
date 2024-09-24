@@ -78,3 +78,13 @@
     }
   }
 }
+
+.main {
+  &__content {
+    padding-block: 80px;
+  }
+}
+
+.pb-80 {
+  padding-bottom: 80px;
+}
