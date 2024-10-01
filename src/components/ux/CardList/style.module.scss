@@ -10,6 +10,8 @@
   }
 
   &__items {
+    display: block;
+
     &-minimal {
       display: flex;
       gap: 30px;
