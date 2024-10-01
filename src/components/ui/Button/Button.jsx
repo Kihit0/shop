@@ -4,7 +4,7 @@ import styles from './style.module.scss';
 const cx = classNames.bind(styles);
 
 const Button = (props) => {
-  const { onClick, light, children, elementButton } = props;
+  const { onClick, light, children, elementButton, ...rest } = props;
   return (
     <button
       {...{
@@ -13,6 +13,7 @@ const Button = (props) => {
           [`button__${elementButton}`]: elementButton,
         }),
         onClick: onClick,
+        ...rest,
       }}
     >
       {children}
