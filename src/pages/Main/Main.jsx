@@ -13,6 +13,7 @@ import {
   cardItemsMinimal,
   cardItemDiscount,
 } from '../../mock/card';
+import FromLogin from '../../components/ui/Forms/FormLogin/FormLogin';
 
 const cx = classNames.bind(styles);
 
@@ -69,11 +70,14 @@ const Main = () => {
       <div {...{ className: cx(styles.main__content, 'container') }}>
         {section.map((item, idx) => {
           return (
-            <section {...{ className: cx('pb-80') }} key={idx}>
+            <section {...{ className: cx('section') }} key={idx}>
               <CardList {...{ ...item }} />
             </section>
           );
         })}
+        <section {...{ className: styles.section__form }}>
+          <FromLogin />
+        </section>
       </div>
     </>
   );
