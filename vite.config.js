@@ -1,9 +1,11 @@
 import autoprefixer from 'autoprefixer';
+// eslint-disable-next-line import/namespace
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import eslintPlugin from 'vite-plugin-eslint';
 
 export default defineConfig({
+  base: './',
   plugins: [
     react(),
     eslintPlugin({
@@ -13,8 +15,10 @@ export default defineConfig({
     }),
   ],
   server: {
-    host: '0.0.0.0',
+    host: 'localhost',
     port: 3000,
+    protocol: 'http',
+    cors: true,
   },
   resolve: {
     alias: {
