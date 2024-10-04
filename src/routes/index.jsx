@@ -8,27 +8,28 @@ import App from '../App';
 const router = createBrowserRouter([
   {
     id: 'root',
-    path: '/',
+    path: 'shop',
     element: <App />,
     children: [
       {
-        id: 'Home',
+        id: '/Home',
+        path: 'shop',
         index: true,
         element: <Main />,
       },
       {
-        id: 'Shop',
-        path: 'shop',
+        id: '/Shop',
+        path: '/shop/shop',
         element: <Shop />,
       },
       {
-        id: 'About',
-        path: 'about',
+        id: '/About',
+        path: 'shop/about',
         element: <About />,
       },
       {
-        id: 'Contact',
-        path: 'contact',
+        id: '/Contact',
+        path: '/shop/contact',
         element: <Contact />,
       },
     ],
