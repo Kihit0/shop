@@ -8,43 +8,44 @@ import ShoppingIcon from '../Icons/ShoppingIcon';
 import styles from './style.module.scss';
 import classNames from 'classnames/bind';
 import Links from '../Links/Links';
+import { BASE_ROUTING } from '../../../constants';
 
 const cx = classNames.bind(styles);
 
 const links = [
   {
-    href: '/',
+    href: BASE_ROUTING,
     content: 'Home',
   },
   {
-    href: '/shop',
+    href: `${BASE_ROUTING}shop`,
     content: 'Shop',
   },
   {
-    href: '/about',
+    href: `${BASE_ROUTING}about`,
     content: 'About',
   },
   {
-    href: '/contact',
+    href: `${BASE_ROUTING}contact`,
     content: 'Contact',
   },
 ];
 
 const iconsLinks = [
   {
-    href: '/search',
+    href: `${BASE_ROUTING}search`,
     content: <SearchIcon />,
   },
   {
-    href: '/profile',
+    href: `${BASE_ROUTING}profile`,
     content: <AvatarIcon />,
   },
   {
-    href: '/favorite',
+    href: `${BASE_ROUTING}favorite`,
     content: <HeartIcon />,
   },
   {
-    href: '/shopping',
+    href: `${BASE_ROUTING}shopping`,
     content: <ShoppingIcon />,
   },
 ];
@@ -75,7 +76,7 @@ const Navigation = () => {
         </svg>
       </div>
       <div {...{ className: styles.navigation__logo }}>
-        <Link {...{ to: '/' }}>
+        <Link {...{ to: BASE_ROUTING }}>
           <LogoWithText />
         </Link>
       </div>

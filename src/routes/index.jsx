@@ -4,31 +4,32 @@ import Shop from '../pages/Shop';
 import About from '../pages/About';
 import Contact from '../pages/Contact';
 import App from '../App';
+import { BASE_ROUTING } from '../constants';
 
 const router = createBrowserRouter([
   {
     id: 'root',
-    path: 'shop',
+    path: BASE_ROUTING,
     element: <App />,
     children: [
       {
-        id: '/Home',
+        id: 'Home',
         index: true,
         element: <Main />,
       },
       {
-        id: '/Shop',
-        path: '/shop/shop',
+        id: 'Shop',
+        path: `${BASE_ROUTING}/shop`,
         element: <Shop />,
       },
       {
         id: '/About',
-        path: 'shop/about',
+        path: `${BASE_ROUTING}/about`,
         element: <About />,
       },
       {
         id: '/Contact',
-        path: '/shop/contact',
+        path: `${BASE_ROUTING}/contact`,
         element: <Contact />,
       },
     ],

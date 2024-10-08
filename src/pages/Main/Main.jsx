@@ -14,6 +14,7 @@ import {
   cardItemDiscount,
 } from '../../mock/card';
 import FromLogin from '../../components/ui/Forms/FormLogin/FormLogin';
+import { BASE_ROUTING } from '../../constants';
 
 const cx = classNames.bind(styles);
 
@@ -60,7 +61,7 @@ const Main = () => {
                 <p {...{ className: styles.slider__subtitle }}>Handcrafted in Viet Nam since 1650</p>
                 <h1 {...{ className: styles.slider__title }}>BAT TRANG DINNER SET</h1>
                 <div {...{ className: styles.slider__btn }}>
-                  <Link {...{ className: styles.slider__link, to: '/shop' }}>SHOP NOW</Link>
+                  <Link {...{ className: styles.slider__link, to: `${BASE_ROUTING}shop` }}>SHOP NOW</Link>
                 </div>
               </div>
             </div>
