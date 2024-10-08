@@ -54,6 +54,12 @@ const Navigation = () => {
   const href = useHref();
   const [isShowBurger, setIsShowBurger] = React.useState(false);
 
+  const handlerClickLink = () => {
+    if (isShowBurger) {
+      setIsShowBurger(false);
+    }
+  };
+
   React.useEffect(() => {
     const hidden = () => {
       document.getElementsByTagName('body')[0].classList.add('hidden');
@@ -88,6 +94,7 @@ const Navigation = () => {
             classNameList: cx(styles.navigation__links, { 'navigation__links-burger': isShowBurger }),
             classNameLink: styles.navigation__link,
             classActive: cx('navigation__link-active'),
+            onClick: handlerClickLink,
           }}
         />
         <div

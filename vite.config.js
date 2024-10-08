@@ -14,6 +14,7 @@ export default defineConfig({
       exclude: [],
     }),
   ],
+  publicDir: 'public',
   server: {
     host: 'localhost',
     port: 3000,

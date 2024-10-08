@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 
 const Links = (props) => {
-  const { links, classNameLink, classNameList, activeItem, classActive = 'active' } = props;
+  const { links, classNameLink, classNameList, activeItem, classActive = 'active', onClick } = props;
 
   return (
     <ul {...{ className: classNameList }}>
@@ -16,7 +16,7 @@ const Links = (props) => {
             }}
             key={idx}
           >
-            <Link {...{ to: link.href }}>{link.content}</Link>
+            <Link {...{ to: link.href, onClick }}>{link.content}</Link>
           </li>
         );
       })}
