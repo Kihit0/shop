@@ -1,7 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom';
 import Main from '../pages/Main/Main';
 import Shop from '../pages/Shop';
-import About from '../pages/About';
+import About from '../pages/About/About';
 import Contact from '../pages/Contact';
 import App from '../App';
 import { BASE_ROUTING } from '../constants';
@@ -23,12 +23,12 @@ const router = createBrowserRouter([
         element: <Shop />,
       },
       {
-        id: '/About',
+        id: 'About',
         path: `${BASE_ROUTING}/about`,
         element: <About />,
       },
       {
-        id: '/Contact',
+        id: 'Contact',
         path: `${BASE_ROUTING}/contact`,
         element: <Contact />,
       },

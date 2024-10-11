@@ -5,15 +5,18 @@ import classNames from 'classnames/bind';
 const cx = classNames.bind(styles);
 
 const CardList = (props) => {
-  const { data, title, v } = props;
+  const { data, title, subtitle, v } = props;
 
   if (!data) return;
 
   return (
     <>
       {title && (
-        <div {...{ className: styles.list__title }}>
-          <h2>{title}</h2>
+        <div {...{ className: styles.list__header }}>
+          <h2 {...{ className: styles.list__title }}>{title}</h2>
+          <div {...{ className: styles.list__center }}>
+            <p {...{ className: styles.list__subtitle }}>{subtitle}</p>
+          </div>
         </div>
       )}
       <div

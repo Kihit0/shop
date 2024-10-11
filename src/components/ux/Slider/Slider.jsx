@@ -5,7 +5,7 @@ import { Autoplay } from 'swiper/modules';
 import 'swiper/swiper-bundle.css';
 
 const Slider = (props) => {
-  const { children, sliderItems } = props;
+  const { children, sliderItems, options } = props;
 
   if (!sliderItems) return;
 
@@ -24,6 +24,7 @@ const Slider = (props) => {
               speed: 500,
               effect: 'fade',
               className: styles.slider__swiper,
+              ...options,
             }}
           >
             {sliderItems.map((item, idx) => {

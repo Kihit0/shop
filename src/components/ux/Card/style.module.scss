@@ -41,7 +41,7 @@
   }
 
   &__img {
-    width: 67.31%;
+    width: 50%;
     height: 348px;
 
     @media screen and (max-width: 768px) {
@@ -66,18 +66,23 @@
 
   &__info {
     width: 50%;
-    padding: 60px 90px;
 
     text-align: center;
 
-    @media screen and (max-width: 1024px) {
-      padding: 40px 60px;
+    &_inner {
+      padding: 60px 90px;
+
+      @media screen and (max-width: 1024px) {
+        padding: 40px 60px;
+      }
+
+      @media screen and (max-width: 768px) {
+        padding: 50px 20px;
+      }
     }
 
     @media screen and (max-width: 768px) {
       width: auto;
-
-      padding: 50px 20px;
     }
 
     &-v1 {
@@ -125,6 +130,8 @@
       font-weight: 600;
 
       text-align: center;
+
+      margin: 0;
     }
   }
 
@@ -145,6 +152,11 @@
       display: -webkit-box;
       line-clamp: 2;
       -webkit-box-orient: vertical;
+    }
+
+    &-minimal {
+      text-align: center;
+      margin: 0;
     }
   }
 

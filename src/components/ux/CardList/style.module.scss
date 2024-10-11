@@ -1,12 +1,32 @@
 .list {
-  &__title {
+  &__header {
+    width: 100%;
     text-align: center;
-    text-transform: uppercase;
-
     font-family: 'Garamond', sans-serif;
     font-size: 30px;
 
+    margin: 0 auto;
     margin-bottom: 48px;
+  }
+
+  &__title {
+    font-size: 36px;
+    text-transform: uppercase;
+  }
+
+  &__center {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__subtitle {
+    color: var(--color-scarpa-flow);
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+
+    max-width: 436px;
+    margin: 0;
   }
 
   &__items {
@@ -34,6 +54,13 @@
   }
 
   &__item {
+    &-minimal {
+      width: 100%;
+
+      @media screen and (min-width: 1024px) {
+        width: 25%;
+      }
+    }
     &-v1 {
       width: calc(25% - 30px);
 

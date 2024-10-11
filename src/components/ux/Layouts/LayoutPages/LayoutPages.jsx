@@ -8,9 +8,7 @@ const LayoutPages = (props) => {
   return (
     <div {...{ className: styles.block }}>
       <div {...{ className: styles.content }}>
-        <div {...{ className: styles.header }}>
-          <Header />
-        </div>
+        <Header />
         <main {...{ className: styles.main }}>{children}</main>
       </div>
       <div {...{ className: styles.footer }}>
