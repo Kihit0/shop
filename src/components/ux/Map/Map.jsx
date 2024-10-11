@@ -8,7 +8,7 @@ import {
 import { LOCATION } from '../../../helper/location';
 
 const Map = (props) => {
-  const apiKey = import.meta.env.VITE_API_KEY_MAPS || null;
+  const apiKey = import.meta.env.VITE_API_KEY_MAPS || 'f7183325-e629-48fe-afe6-6db0513e86cf';
 
   if (!apiKey) return <div>MAPS NOT FOUND</div>;
 
