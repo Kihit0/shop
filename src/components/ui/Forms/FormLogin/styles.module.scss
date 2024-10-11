@@ -39,6 +39,10 @@
     &-error {
       color: #e78485;
       border-color: #e78485;
+
+      &::placeholder {
+        color: inherit;
+      }
     }
 
     &_wrapper {

@@ -23,12 +23,12 @@ const router = createBrowserRouter([
         element: <Shop />,
       },
       {
-        id: '/About',
+        id: 'About',
         path: `${BASE_ROUTING}/about`,
         element: <About />,
       },
       {
-        id: '/Contact',
+        id: 'Contact',
         path: `${BASE_ROUTING}/contact`,
         element: <Contact />,
       },
