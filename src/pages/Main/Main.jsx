@@ -54,7 +54,7 @@ const Main = () => {
             <div {...{ className: cx(styles.slider__message_wrapper, 'container') }}>
               <div {...{ className: styles.slider__message_content }}>
                 <div {...{ className: styles.slider__logo }}>
-                  <Link {...{ to: '/' }}>
+                  <Link {...{ to: `${BASE_ROUTING}` }}>
                     <Logo />
                   </Link>
                 </div>

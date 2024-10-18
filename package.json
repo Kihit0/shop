@@ -24,6 +24,7 @@
     "@yandex/ymaps3-types": "^0.0.29",
     "autoprefixer": "^10.4.20",
     "classnames": "^2.5.1",
+    "formik": "^2.4.6",
     "normalize-scss": "^8.0.0",
     "postcss": "^8.4.41",
     "react": "^18.3.1",

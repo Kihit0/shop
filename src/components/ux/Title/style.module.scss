@@ -1,0 +1,19 @@
+.title {
+  font-size: 36px;
+  text-transform: uppercase;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.subtitle {
+  color: var(--color-scarpa-flow);
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+
+  max-width: 436px;
+  margin: 0;
+}

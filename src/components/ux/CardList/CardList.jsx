@@ -1,4 +1,5 @@
 import Card from '../Card/Card';
+import Title from '../Title/Title';
 import styles from './style.module.scss';
 import classNames from 'classnames/bind';
 
@@ -13,10 +14,7 @@ const CardList = (props) => {
     <>
       {title && (
         <div {...{ className: styles.list__header }}>
-          <h2 {...{ className: styles.list__title }}>{title}</h2>
-          <div {...{ className: styles.list__center }}>
-            <p {...{ className: styles.list__subtitle }}>{subtitle}</p>
-          </div>
+          <Title {...{ title, subtitle }} />
         </div>
       )}
       <div
