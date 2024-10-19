@@ -1,0 +1,23 @@
+.marker {
+  width: 26px;
+  height: 26px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 2px solid var(--color-tune);
+
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  & > span {
+    display: block;
+    background-color: var(--color-tune);
+    width: 20px;
+    height: 20px;
+
+    border-radius: 50%;
+  }
+}

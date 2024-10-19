@@ -1,8 +1,9 @@
+import styles from './style.module.scss';
 import {
   YMap,
   YMapComponentsProvider,
   YMapDefaultFeaturesLayer,
-  YMapDefaultMarker,
+  YMapMarker,
   YMapDefaultSchemeLayer,
 } from 'ymap3-components';
 import { LOCATION } from '../../../helper/location';
@@ -21,7 +22,11 @@ const Map = (props) => {
       <YMap {...{ location }}>
         <YMapDefaultSchemeLayer />
         <YMapDefaultFeaturesLayer />
-        <YMapDefaultMarker {...{ coordinates: location.center }} />
+        <YMapMarker {...{ coordinates: location.center }}>
+          <div {...{ className: styles.marker }}>
+            <span></span>
+          </div>
+        </YMapMarker>
       </YMap>
     </YMapComponentsProvider>
   );
