@@ -13,6 +13,7 @@ import styles from './style.module.scss';
 import classNames from 'classnames/bind';
 import { slider } from '../../mock/slider';
 import { BASE_ROUTING } from '../../constants/index';
+import FormContact from '../../components/ui/Forms/FormContact/FormContact';
 
 const cx = classNames.bind(styles);
 
@@ -64,10 +65,9 @@ const SOCIALS = [
 ];
 
 const Contact = () => {
-  const handleClickLink = (e) => {
+  const handleClickLink = (e, value) => {
     e.preventDefault();
-    console.log(e);
-    window.open();
+    window.open(value.href);
   };
 
   return (
@@ -101,7 +101,7 @@ const Contact = () => {
           </Slider>
         </section>
         <div {...{ className: cx('container') }}>
-          <section>
+          <section {...{ className: styles.section }}>
             <div {...{ className: styles.contact__content }}>
               <div {...{ className: styles.contact__title }}>
                 <Title
@@ -125,6 +125,9 @@ const Contact = () => {
                 </ul>
               </div>
             </div>
+          </section>
+          <section {...{ className: styles.section }}>
+            <FormContact />
           </section>
         </div>
       </div>

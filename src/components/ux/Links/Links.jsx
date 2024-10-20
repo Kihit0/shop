@@ -16,7 +16,7 @@ const Links = (props) => {
             }}
             key={idx}
           >
-            <Link {...{ to: link.href, onClick }}>{link.content}</Link>
+            <Link {...{ to: link.href, onClick: (e) => onClick(e, link) }}>{link.content}</Link>
           </li>
         );
       })}
