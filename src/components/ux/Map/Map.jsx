@@ -9,6 +9,7 @@ import {
 import { LOCATION } from '../../../helper/location';
 
 // TODO Feature: style marker custom!
+// TODO Feature: click marker and about shop info
 
 const Map = (props) => {
   const apiKey = import.meta.env.VITE_API_KEY_MAPS || 'f7183325-e629-48fe-afe6-6db0513e86cf';

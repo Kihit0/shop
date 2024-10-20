@@ -1,10 +1,12 @@
 import React from 'react';
 import Button from '../../Button/Button';
-import styles from './styles.module.scss';
+import styles from './style.module.scss';
 import classNames from 'classnames/bind';
 import { validationEmail } from '../../../../helper/validation';
 
 const cx = classNames.bind(styles);
+
+//TODO Feature: redirect on login page
 
 const FromLogin = () => {
   const [email, setEmail] = React.useState('');
